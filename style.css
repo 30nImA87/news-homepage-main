@@ -1,50 +1,196 @@
-/* Loading-Stuff */
+/* Import-Stuff */
   /* fonts */
   @font-face {
     font-family: 'Inter';
-    src: url(/assets/fonts/static/Inter-Regular.ttf) format('truetype');
-    font-weight: normal;
+    font-weight: 300;
+    src: url(/assets/fonts/static/Inter-Regular.ttf);
   }
   @font-face {
     font-family: 'Inter';
-    src: url(/assets/fonts/static/Inter-Bold.ttf) format('truetype');
-    font-weight: bold;
+    src: url(/assets/fonts/static/Inter-Bold.ttf);
+    font-weight: 700;
   }
   @font-face {
     font-family: 'Inter';
-    src: url(/assets/fonts/static/Inter-ExtraBold.ttf) format('truetype');
-    font-weight: bolder;
+    font-weight: 800;
+    src: url(/assets/fonts/static/Inter-ExtraBold.ttf);
   }
 
 /* General */
-:root {
-  /* fonts */
-  --ff: 'Inter';
+  :root {
+    /* fonts */
+    --ff: 'Inter';
 
-  --fw-n: 300;
-  --fw-m: 700;
-  --fw-b: 800;
+    --fw-n: 300;
+    --fw-b: 700;
+    --fw-eb: 800;
 
-  --fs-2: 5rem;
-  --fs-3: 2rem;
-  --fs-p: 15px;
+    --fs-1: 2.5rem;
+    --fs-2: 2rem;
+    --fs-3: 1.5rem;
+    --fs-p: 15px;
 
-  --off-white: hsl(36, 100%, 99%);
-  --grayish-blue: hsl(233, 8%, 79%);
-  --dark-grayish-blue: hsl(236, 13%, 42%);
-  --very-dark-blue: hsl(240, 100%, 5%);
+    --off-white: hsl(36, 100%, 99%);
+    --grayish-blue: hsl(233, 8%, 79%);
+    --dark-grayish-blue: hsl(236, 13%, 42%);
+    --very-dark-blue: hsl(240, 100%, 5%);
+
+    /* background */
+
+    --primary-clr: hsl(35, 77%, 62%);
+    --secondry-clr: hsl(5, 85%, 63%);
+
+    /* positioning */
+      /* section-padding */
+      --sec-pad: 150px 0;
+    --mw: 800px;
+    --w: 90%;
+    --gap: 2em;
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    height: 100vh;
+  }
+
+  ul {
+    list-style-type: none;
+
+    /* border-style: solid;
+    border-width: 1px;
+    border-color: black; */
+  }
+
+  h1 {
+    font-weight: var(--fw-eb);
+    font-size: var(--fs-1);
+  }
+
+/*Body-Adjustments*/
+body {
+  margin: 0;
+  padding: 75px 10em;
+  /* padding-left: 10rem;
+  padding-right: 10rem; */
+  font-family: var(--ff);
+  text-decoration: none;
+  gap: var(--gap);
+  display: grid;
+  grid-template-columns: auto 30%;
+  grid-template-rows: 70px auto 30% 5%;
+  grid-template-areas:  "head   head" 
+                        "main   new"
+                        "foot   foot"
+                        "attri  attri";
 }
 
-body {
-  font-family: var(--ff);
+@media screen and ( max-width: 975px ) {
+  body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(auto, 5);
+    grid-template-areas:  "head"
+                          "main" 
+                          "new"
+                          "foot"
+                          "attri";
+  }
+  header {
+    background-color: brown;
+  }
+  aside {
+    grid-area: new;
+    background-color: var(--very-dark-blue);
+    color: red;
+    box-shadow: 0px 0px 15px .05rem red;
+    padding: 25px;
+    gap: var(--gap);
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(auto, 3);
+  }
+}
+  
+
+header {
+  grid-area: head;
+  background-color: pink;
+  box-shadow: 0px 0px 15px 0.15rem;
+  gap: var(--gap);
+  display: grid;
+  grid-template-columns: 10em auto;
+  
+  }
+
+/* .left-header-container{
+  display: flex;
+} */
+.logo-container {
+  /* background-color: var(--primary-clr); */
+  padding: 10px 0px 10px var(--gap);
 }
 
 nav {
-  font-weight: bolder;
-  color: var(--grayish-blue);
+  font-weight: var(--fw-n);
+  font-size: var(--fs-p);
+  color: var(--dark-grayish-blue);
+  /* background-color: var(--secondry-clr); */
+  display: grid;
+  align-items: center;
+  padding: 0px 1em 0px 25em;
 }
 
-h1 {
-  font-weight: bolder;
-  font-size: var(--fs-2);
+.nav-bar { 
+  display: flex;
+  justify-content: space-between;
+}
+
+main {
+  grid-area: main;
+  background-color: lightgrey;
+  box-shadow: 0px 0px 15px 0.15rem;
+}
+
+.main-img-container {
+  width: 68px;
+}
+
+aside {
+  grid-area: new;
+  background-color: var(--very-dark-blue);
+  color: red;
+  box-shadow: 0px 0px 15px .05rem red;
+  padding: 25px;
+  gap: var(--gap);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+  .aside-section {
+    background-color: lightblue;
+    gap: var(--gap);
+    margin: 25px;
+  
+  }
+
+footer {
+  grid-area: foot;
+  box-shadow: 0px 0px 15px 0.15rem;
+}
+
+  .footer-section {
+    display: flex;
+    justify-content: space-between;
+  }
+
+.attribution {
+  display: attri;
+  background-color: rgb(48, 133, 121);
+  color: var(--off-white);
 }

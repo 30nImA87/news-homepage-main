@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
+
   <title>Frontend Mentor | News homepage</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -17,8 +18,13 @@
 <body>
 <!---->
   <header>
+    <section class="left-header-container">
+      <div class="logo-container">
+        <img src="/assets/images/logo.svg" alt="W. logo">
+      </div>
+    </section>
     <nav>
-      <ul>
+      <ul class="nav-bar">
         <li>Home</li>
         <li>New</li>
         <li>Popular</li>
@@ -27,8 +33,12 @@
       </ul>
     </nav>
   </header>
+<!---->  
   <main>
     <article>
+      <!-- <div class="main-img-container">
+        <img style="width: 100px;" src="/assets/images/image-web-3-desktop.jpg" alt="Web 3.0 building blocks">
+      </div> -->
       <h1>The Bright Future of Web 3.0?</h1>
       <p>
         We dive into the next evolution of the web that claims to 
@@ -38,10 +48,11 @@
       <a href="">Read more</a>
     </article>
   </main>
-<!---->  
+<!---->
   <aside>
-    <section>
-        <h2>New</h2>
+        <div>
+          <h2>New</h2>
+        </div>
         <div>
           <h3>Hydrogen VS Electric Cars</h3>
           <p>
@@ -61,11 +72,11 @@
             We take a look at what that means.
           </p>
         </div>
-    </section>
   </aside>
 <!---->
+<!---->
   <footer>
-    <section>
+    <section class="footer-section">
       <div>
         <h2>01</h2>
         <h3>Reviving Retro PCs</h3>
@@ -83,8 +94,7 @@
    </section>
   </footer>
   <!--attribution to the site and author-->
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  <div class="attribution"> 
     Coded by <a href="#">Nima M</a>.
   </div>
 </body>
