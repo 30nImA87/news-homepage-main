@@ -68,17 +68,18 @@
   }
 
 /*Body-Adjustments*/
-@media screen and ( max-width: 975px ) {
+@media screen and ( min-width: 975px ) {
   body {
+    grid-gap: var(--gap);
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    /* grid-template-areas:  "head"
-                          "main" 
-                          "new"
-                          "foot"
-                          "attri";
-  } */
+    grid-template-columns: auto 30%;
+    grid-template-rows: 70px auto 30% 20px;
+    grid-template-areas:  "head   head" 
+                          "main   new"
+                          "foot   foot"
+                          "attri  attri";
+   
+  }
   /* header {
     background-color: black;
     display: grid;
@@ -95,7 +96,7 @@
     grid-template-columns: 100%;
     grid-template-rows: repeat(auto, 3);
   } */
-}}
+}
 
 body {
   margin: 0;
@@ -104,12 +105,12 @@ body {
   text-decoration: none;
   gap: var(--gap);
   display: grid;
-  grid-template-columns: auto 30%;
-  grid-template-rows: 70px auto 30% 20px;
-  grid-template-areas:  "head   head" 
-                        "main   new"
-                        "foot   foot"
-                        "attri  attri";
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-areas:  "head"
+                        "main" 
+                        "new"
+                        "foot"
+                        "attri";
 }
 
 header {
