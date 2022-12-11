@@ -1,0 +1,183 @@
+/* Import-Stuff */
+  /* fonts */
+  @font-face {
+    font-family: 'Inter';
+    font-weight: 300;
+    src: url(/assets/fonts/static/Inter-Regular.ttf);
+  }
+  @font-face {
+    font-family: 'Inter';
+    src: url(/assets/fonts/static/Inter-Bold.ttf);
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-weight: 800;
+    src: url(/assets/fonts/static/Inter-ExtraBold.ttf);
+  }
+
+/* General */
+  :root {
+    /* fonts */
+    --ff: 'Inter';
+
+    --fw-n: 300;
+    --fw-b: 700;
+    --fw-eb: 800;
+
+    --fs-1: 2.5rem;
+    --fs-2: 2rem;
+    --fs-3: 1.5rem;
+    --fs-p: 15px;
+
+    --off-white: hsl(36, 100%, 99%);
+    --grayish-blue: hsl(233, 8%, 79%);
+    --dark-grayish-blue: hsl(236, 13%, 42%);
+    --very-dark-blue: hsl(240, 100%, 5%);
+
+    /* background */
+
+    --primary-clr: hsl(35, 77%, 62%);
+    --secondry-clr: hsl(5, 85%, 63%);
+
+    /* positioning */
+      /* section-padding */
+      --sec-pad: 150px 0;
+    --mw: 800px;
+    --w: 90%;
+    --gap: 2em;
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    height: 100vh;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  h1 {
+    font-weight: var(--fw-eb);
+    font-size: var(--fs-1);
+  }
+
+/*Body-Adjustments*/
+@media screen and ( min-width: 975px ) {
+  body {
+    display: grid;
+    grid-template-columns: auto 30%;
+    grid-template-rows: 70px auto 30% 20px;
+    grid-template-areas:  "head   head" 
+                          "main   new"
+                          "foot   foot"
+                          "attri  attri";
+  }
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: var(--ff);
+  text-decoration: none;
+  gap: var(--gap);
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-areas:  "head"
+                        "main" 
+                        "new"
+                        "foot"
+                        "attri";
+}
+
+header {
+  grid-area: head;
+  background-color: pink;
+  box-shadow: 0px 0px 15px 0.15rem;
+  /* gap: var(--gap); */
+  /* display: grid;
+  grid-template-columns: 100px, minmax(1fr, max-content); */
+  display: flex;
+  justify-content: space-between;
+  z-index: 999;
+  }
+
+.left-header-container{
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.logo-container {
+  background-color: var(--primary-clr);
+}
+
+nav {
+  font-weight: var(--fw-n);
+  font-size: var(--fs-p);
+  color: var(--dark-grayish-blue);
+  background-color: var(--secondry-clr);
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 10px;
+}
+
+/* .nav-bar { 
+  display: flex;
+  justify-content: space-between;
+} */
+
+main {
+  padding: 25px;
+  grid-area: main;
+  background-color: lightgrey;
+  box-shadow: 0px 0px 15px 0.15rem;
+}
+
+.main-img-container {
+  width: 68px;
+}
+
+aside {
+  grid-area: new;
+  background-color: burlywood;
+  color: red;
+  box-shadow: 0px 0px 15px .05rem red;
+  padding: 25px;
+  gap: var(--gap);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+  .aside-section {
+    background-color: lightblue;
+    gap: var(--gap);
+    margin: 25px;
+  }
+
+footer {
+  padding: 25px;
+  grid-area: foot;
+  box-shadow: 0px 0px 15px 0.15rem;
+}
+
+  .footer-section {
+    display: flex;
+    justify-content: space-between;
+  }
+
+.attribution {
+  grid-area: attri;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  background-color: rgb(48, 133, 121);
+  box-shadow: 0px 0px 15px 0.15rem;
+  color: var(--off-white);
+}

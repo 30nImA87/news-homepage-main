@@ -1,6 +1,6 @@
-# Frontend Mentor - News homepage solution
+# Nima M - News homepage solution
 
-This is a solution to the [News homepage challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is my solution to a [News homepage]. 
 
 ## Table of contents
 
@@ -10,8 +10,8 @@ This is a solution to the [News homepage challenge on Frontend Mentor](https://w
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
+  - [What I learned](#what-i-learned)--> here atm
+  - [Continued development](#continued-development)--> also here
   - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
@@ -22,11 +22,28 @@ This is a solution to the [News homepage challenge on Frontend Mentor](https://w
 
 ### The challenge
 
-Users should be able to:
+I should be able to:
+
+- Create a project and structure it and document it as much as possible
+- Share my goal with the community and involve them into dev if needed
+- Structure my website with HTML5 to match the design
+- Style my website with CSS the way the design looks
+- **Bonus**: Use JS to load variable font, style files into CSS
+
+- Code, code, code, test, test, test, learn, learn, learn, code, code, code, apply, apply, apply, learn, learn, learn,
+  coffee 
+
+Helpers of my project should be able to:
+
+- View my goals in a created project
+- View my code and the progression of it via repository
+- Involve in editing my repository by creating branches and merging them into stable versions
+
+Users of the Website should be able to:
 
 - View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page
-- **Bonus**: Toggle the mobile menu (requires some JavaScript)
+- **Bonus**: Toggling the mobile menu (maybe i can do it)
 
 ### Screenshot
 
@@ -62,9 +79,38 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
+#### Structure
+
+**.git and github**
+
+I like to structure every step of my project and organize it. So I learned on frontendmentor.io how to organize my structure and to document it. (create readme, define and document my process)
+Through a lot of Tutorials on youtube.com and on websites like stackoverflow.com, github.com I learned to initialize .gits to save my progress and be able to jump between different versions of my code.
+I also learned to create repositories to organize my project and give it the structure it needs, to share it with other people, that want to commit some help in the projects process. 
+
+**html**
+
+I learn how to structure the html code in semantic containers, so I can access it via css and js.
+And yet keep it simpel enough for maintenance and extensions.
+
+**css**
+
+I learn which step I go first, when I start to style the structured html code.
+I start with general styles, like the font definition.
+  Added some custom fonts to the css.file
+  ```css
+  @font-face {
+    font-family: '';
+    src: url();
+  }
+  ```
+
+After that i start to code the design i want from header to aside to main to footer.
+
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
 To see how you can add code snippets, see below:
+
+
 
 ```html
 <h1>Some HTML code I'm proud of</h1>
@@ -86,6 +132,13 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 
 ### Continued development
 
+#### .git and github
+#### CSS
+
+#### JS
+
+#### HTML
+
 Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
 
 **Note: Delete this note and the content within this section and replace with your own plans for continued development.**
@@ -99,7 +152,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
+- Website - [Nima M.](https://www.no-site-yet-DONT-CLICK-THIS.com)
 - Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
 - Twitter - [@yourusername](https://www.twitter.com/yourusername)
 
